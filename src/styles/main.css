@@ -1,0 +1,28 @@
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  --primary: #1a8917;
+  --primary-hover: #0f730d;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--primary);
+}
+
+.hover\:text-primary:hover {
+  color: var(--primary);
+}

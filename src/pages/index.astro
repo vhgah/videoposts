@@ -1,11 +1,203 @@
 ---
-import Welcome from '@/components/Welcome.vue';
-import Layout from '../layouts/Layout.astro';
+import Header from '@/components/Header.astro'
+import Layout from '@/layouts/Layout.astro'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import {
+  EyeIcon,
+  PlusIcon,
+  ChatBubbleOvalLeftIcon,
+} from '@heroicons/vue/24/outline'
+import Sidebar from '@/components/Sidebar.vue'
 ---
 
 <Layout>
-	<Welcome />
+  <div class='min-h-screen bg-white'>
+    <!-- Navigation Bar -->
+    <Header />
+
+    <!-- Main Content -->
+    <main class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+      <div class='flex flex-col lg:flex-row'>
+        <!-- Feed Section -->
+        <div class='lg:w-2/3 lg:pr-12'>
+          <!-- Tabs -->
+          <div class='border-b border-gray-200 mb-6'>
+            <div class='flex space-x-8'>
+              <button>
+                <PlusIcon class='h-5 w-5 mr-1' />
+              </button>
+              <button
+                class='flex items-center py-4 border-b-2 border-primary text-primary'
+              >
+                <span>For you</span>
+              </button>
+              <button class='py-4 border-b-2 border-transparent'>
+                Following
+              </button>
+            </div>
+          </div>
+
+          <!-- Articles -->
+          <div class='space-y-8'>
+            <!-- Article 1 -->
+            <article class='flex flex-col md:flex-row'>
+              <div class='md:flex-1 pr-0 md:pr-6'>
+                <div class='flex items-center mb-2'>
+                  <img
+                    class='h-6 w-6 rounded-full mr-2'
+                    src='https://v0.dev/placeholder.svg?height=24&width=24'
+                    alt='Author'
+                  />
+                  <span class='text-sm'>J. Kim</span>
+                </div>
+                <h2 class='text-xl font-bold mb-2'>Rituals I Kept From 2020</h2>
+                <p class='text-gray-600 mb-2'>
+                  Five rituals that started during the 2020 COVID-19 lockdowns
+                  that I still do regularly, five years later
+                </p>
+                <div class='flex items-center text-gray-500 text-sm'>
+                  <span>4d ago</span>
+                  <span class='mx-1'>·</span>
+                  <span class='flex items-center'>
+                    <EyeIcon class='h-4 w-4 mr-1' />
+                    914
+                  </span>
+                  <span class='mx-1'>·</span>
+                  <span class='flex items-center'>
+                    <ChatBubbleOvalLeftIcon class='h-4 w-4 mr-1' />
+                    25
+                  </span>
+                </div>
+              </div>
+              <div class='mt-4 md:mt-0 md:flex-shrink-0'>
+                <img
+                  class='h-32 w-32 object-cover'
+                  src='https://v0.dev/placeholder.svg?height=128&width=128'
+                  alt='Article image'
+                />
+              </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class='flex flex-col md:flex-row'>
+              <div class='md:flex-1 pr-0 md:pr-6'>
+                <div class='flex items-center mb-2'>
+                  <div
+                    class='h-6 w-6 rounded bg-red-200 mr-2 flex items-center justify-center text-xs'
+                  >
+                    L
+                  </div>
+                  <span class='text-sm'
+                    >In Language Lab by Kaspar Sebastian</span
+                  >
+                </div>
+                <h2 class='text-xl font-bold mb-2'>
+                  A Thorough Guide to Becoming Multilingual—Part III
+                </h2>
+                <p class='text-gray-600 mb-2'>
+                  Why word learning is world learning
+                </p>
+                <div class='flex items-center text-gray-500 text-sm'>
+                  <span>Apr 22</span>
+                  <span class='mx-1'>·</span>
+                  <span class='flex items-center'>
+                    <EyeIcon class='h-4 w-4 mr-1' />
+                    232
+                  </span>
+                  <span class='mx-1'>·</span>
+                  <span class='flex items-center'>
+                    <ChatBubbleOvalLeftIcon class='h-4 w-4 mr-1' />
+                    2
+                  </span>
+                </div>
+              </div>
+              <div class='mt-4 md:mt-0 md:flex-shrink-0'>
+                <img
+                  class='h-32 w-32 object-cover'
+                  src='https://v0.dev/placeholder.svg?height=128&width=128'
+                  alt='Article image'
+                />
+              </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class='flex flex-col md:flex-row'>
+              <div class='md:flex-1 pr-0 md:pr-6'>
+                <div class='flex items-center mb-2'>
+                  <div
+                    class='h-6 w-6 rounded bg-gray-200 mr-2 flex items-center justify-center text-xs'
+                  >
+                    H
+                  </div>
+                  <span class='text-sm'>In The Hub Publication by Shaant</span>
+                </div>
+                <h2 class='text-xl font-bold mb-2'>
+                  I Learned a Skill Out of Poverty So Deep, Rich People Will
+                  Never Even Know It Exists
+                </h2>
+                <p class='text-gray-600 mb-2'>
+                  This one survival instinct taught me more than any degree, and
+                  it still shapes every decision I make.
+                </p>
+                <div class='flex items-center text-gray-500 text-sm'>
+                  <span>Apr 21</span>
+                  <span class='mx-1'>·</span>
+                  <span class='flex items-center'>
+                    <EyeIcon class='h-4 w-4 mr-1' />
+                    3.5K
+                  </span>
+                  <span class='mx-1'>·</span>
+                  <span class='flex items-center'>
+                    <ChatBubbleOvalLeftIcon class='h-4 w-4 mr-1' />
+                    58
+                  </span>
+                </div>
+              </div>
+              <div class='mt-4 md:mt-0 md:flex-shrink-0'>
+                <img
+                  class='h-32 w-32 object-cover'
+                  src='https://v0.dev/placeholder.svg?height=128&width=128'
+                  alt='Article image'
+                />
+              </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class='flex flex-col md:flex-row'>
+              <div class='md:flex-1 pr-0 md:pr-6'>
+                <div class='flex items-center mb-2'>
+                  <img
+                    class='h-6 w-6 rounded-full mr-2'
+                    src='https://v0.dev/placeholder.svg?height=24&width=24'
+                    alt='Author'
+                  />
+                  <span class='text-sm'
+                    >In The Taoist Online by Sadhvi Pharasi</span
+                  >
+                </div>
+                <h2 class='text-xl font-bold mb-2'>
+                  Nature Doesn't Rush, So Why Are You?
+                </h2>
+                <p class='text-gray-600 mb-2'>
+                  Overworked? Overwhelmed? Maybe You're Moving Too Fast.
+                </p>
+              </div>
+              <div class='mt-4 md:mt-0 md:flex-shrink-0'>
+                <img
+                  class='h-32 w-32 object-cover'
+                  src='https://v0.dev/placeholder.svg?height=128&width=128'
+                  alt='Article image'
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <Sidebar />
+      </div>
+    </main>
+  </div>
 </Layout>
