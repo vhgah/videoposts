@@ -26,3 +26,13 @@ body {
 .hover\:text-primary:hover {
   color: var(--primary);
 }
+
+.post-content {
+  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1.8;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  color: #3a3a3a;
+  font-style: normal;
+
+}
